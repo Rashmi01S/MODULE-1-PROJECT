@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <title>GAME</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header">
+                <div class="title">
+                    <p>Rock</p>
+                    <p>Paper</p>
+                    <p>Sicssors</p>
+                </div>
+                <div class="score">
+                    <article class="score_card">
+                        <p>YOUR SCORE</p>
+                        <p id="userScore">0</p>
+                    </article>
+                    <article class="score_card">
+                        <p>COMPUTER SCORE</p>
+                        <p id="computerScore">0</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="main">
+        <div class="container">
+            <div class="screen" style="display: block;">
+                <div class="choice_screen">
+                    <div class="part1">
+                        <!-- Rock  line  sicssor -->
+                        <div class="option_card rock" id="rock" data-value="rock">
+                            <img src="images/stone.png" alt="Rock">
+                        </div>
+                        <div class="line line_1"></div>
+                        <div class="option_card scissors" id="scissors" data-value="scissors">
+                            <img src="images/scissors.png" alt="scissors">
+                        </div>
+                    </div>
+                    <div class="part2">
+                        <div class="line tilt_1"></div>
+                        <div class="line tilt_2"></div>
+                    </div>
+                    <div class="part3">
+                        <!-- line paper line -->
+                        <div class="option_card paper" id="paper" data-value="paper">
+                            <img src="images/paper.png" alt="paper">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="result_screen" style="display: none;">
+                <div class="mobile-result">
+                    <p>
+                        <span id="mobile_winner">YOU WIN</span>
+                        <br>
+                        AGAINST PC
+                    </p>
+                </div>
+                <div class="result_box">
+                    <div class="selected_option user">
+                        <p>YOU PICKED</p>
+                        <div class="option_card" id="user">
+                            <img src="" alt="user choice image" id="userPickImage">
+                        </div>
+                        <div id="userwiningIndicator" class="winnerIndicator" style="display: none;">
+                            <div class="circle outer" style="--i: 1"></div>
+                            <div class="circle inner" style="--i: 2"></div>
+                            <div class="circle innermost" style="--i: 3"></div>
+                        </div>
+                    </div>
+                    <div class="result">
+                        <p>
+                            <span id="winner">YOU WIN </span>
+                            <br>
+                            AGAINST PC
+                        </p>
+                        <button class="play_again_btn" id="play">PLAY AGAIN</button>
+                    </div>
+                    <div class="selected_option computer">
+                        <p>PC PICKED</p>
+                        <div class="option_card" id="computer">
+                            <img src="" alt="computer choice image" id="computerChoiceImage">
+                        </div>
+                        <div id="computerwiningIndicator" class="winnerIndicator" style="display: none;">
+                            <div class="circle outer" style="--i: 1"></div>
+                            <div class="circle inner" style="--i: 2"></div>
+                            <div class="circle innermost" style="--i: 3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-result">
+                    <button class="play_again_btn" id="mobile_play">PLAY AGAIN</button>
+                </div>
+            </div>
+            <!-- winner Indicator -->
+        </div>
+    </section>
+    <div class="rule_wrapper">
+        <div class="rule_box">
+            <div class="rule_box_header">
+                <p>Game Rules</p>
+            </div>
+            <div class="close_btn">
+                <img src="images/cross.png" alt="close">
+            </div>
+            <div class="rule_content">
+                <ul>
+                    <li class="list_item">
+                        Rock beats scissors, scissors beat paper, and paper beats rock.
+                    </li>
+                    <li class="list_item">
+                        Agree ahead of time whether you’ll count off “rock, paper,
+                        scissors, shoot” or just “rock, paper, scissors.”
+                    </li>
+                    <li class="list_item">
+                        Use rock, paper, scissors to settle minor decisions or simply play
+                        to pass the time
+                    </li>
+                    <li class="list_item">
+                        If both players lay down the same hand, each player lays down
+                        another hand
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="bottom_btn">
+        <button class="rule_btn rule">RULES</button>
+        <a href="" class="rule_btn" id="next_btn">NEXT</a>
+    </div>
+
+    <script src="home.js"></script>
+
+</body>
+
+</html>
